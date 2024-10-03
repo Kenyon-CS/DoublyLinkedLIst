@@ -97,3 +97,30 @@ public:
         }
     }
 };
+
+int main() {
+    DoublyLinkedList dll;
+    
+    // Using push_back and push_front
+    dll.push_back(10);
+    dll.push_back(20);
+    dll.push_front(5);
+    dll.push_front(1);
+    
+    std::cout << "Doubly Linked List after push operations: ";
+    dll.display();
+    
+    // Using pop_back and pop_front
+    dll.pop_back();
+    dll.pop_front();
+    
+    std::cout << "Doubly Linked List after pop operations: ";
+    dll.display();
+    
+    // Attempting to pop from empty list
+    dll.pop_front();
+    dll.pop_back();
+    dll.pop_front(); // Should indicate that the list is empty
+    
+    return 0;
+}
